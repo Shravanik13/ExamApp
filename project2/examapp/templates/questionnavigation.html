@@ -1,0 +1,60 @@
+
+<html>
+
+<html></html>
+
+<head>
+
+    <style>
+
+        input[type='text']
+        {
+            display: block;
+            margin: 10px;
+            padding: 20px;
+            width: 400;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+        <input type="text" name="qno" value="{{question.qno}}"> 
+        
+        <input type="text" name="qtext" value="{{question.qtext}}">
+
+        <input type="hidden" name="answer" value="{{question.answer}}">
+
+        <input type="radio" name="op" value="{{question.op1}}"> <span style="color:red"> {{question.op1}} </span>
+
+        <input type="radio" name="op" value="{{question.op2}}"> <span style="color:red"> {{question.op2}} </span>
+
+        <input type="radio" name="op" value="{{question.op3}}"><span style="color:red"> {{question.op3}} </span>
+
+        <input type="radio" name="op" value="{{question.op4}}"><span style="color:red"> {{question.op4}} </span>
+
+        <input type="hidden" type="text" name="subject" value="{{question.subject}}"><br><br>
+
+
+        <input type="submit" value="next" formaction="/examapp/nextquestion">
+        <input type="submit" value="previous" formaction="/examapp/previousquestion">
+               
+        <input type="submit" value="end exam" formaction="/examapp/endexam">
+
+    </form>
+
+   
+
+
+    <span style="color:red;font-size: 30px;"> {{message}} </span>
+
+</body>
+
+
+</html>
+</html>
